@@ -45,37 +45,6 @@
     margin-bottom: 1.5rem;
 }
 
-.info-about1,
-.info-about2,
-.info-about3{
-    background: var(--bg-color);
-    font-size: .5rem;
-    position: absolute;
-    padding: 10px;
-    width: 90px;
-    height: 90px;
-    border-radius: 69% 31% 66% 34% / 21% 30% 70% 79%;
-    display: block;
-    box-shadow: var(--neon-box-shadow);
-    border: 1px solid var(--hover-color);
-    outline: 2px solid var(--bg-color);
-    z-index: 100;
-    animation: morph 6s linear infinite;
-}
-
-.info-about1{
-    left: 10%;
-    top: 34%;
-}
-
-.info-about2{
-    left: 66%;
-    top: 34%;
-}
-.info-about3{
-    left: 61%;
-    top: 70%;
-}
 
 .img-about span{
     color: var(--hover-color);
