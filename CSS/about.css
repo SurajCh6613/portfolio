@@ -16,6 +16,7 @@
 .about .img-about img{
     max-width: 400px;
     height: auto;
+    padding-bottom: 0;
 }
 
 .about-content span{

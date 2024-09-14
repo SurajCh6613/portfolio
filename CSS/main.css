@@ -39,6 +39,8 @@ section{
     padding: 100px 5%;
 }
 
+
+
 ::-webkit-scrollbar{
     height: 0;
     width: .5rem;
@@ -64,13 +66,13 @@ section{
 .scroll-bottom{
     opacity: 0;
     transform: translateY(300px);
-    transition: 2s;
+    transition: 1s;
 }
 
 .scroll-top{
     opacity: 0;
     transform: translateY(-300px);
-    transition: 2s;
+    transition: 1s;
 }
 
 .show-items{

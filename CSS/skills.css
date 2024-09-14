@@ -4,14 +4,15 @@
 
 .skill-main{
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-row-gap: 30px;
-    grid-column-gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.skill-left{
+    width: 70%;
+}
 
-/* -- Skill Left CSS */
 .skill-bar{
     margin-bottom: 2.3rem;
 }
@@ -39,7 +40,7 @@
 }
 
 .skill-bar .bar span{
-    width: 50%;
+    width: 100%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -68,61 +69,6 @@
     animation: javascript 5s;
 }
 
-
-/* -- Skill Right CSS */
-
-.professional{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.box{
-    position: relative;
-    margin: 10px 0;
-    flex: 1 1 15rem;
-}
-
-.box .text{
-    text-align: center;
-    color: #fff;
-    font-size: 1rem;
-}
-
-.box .text big{
-    font: 400;
-    letter-spacing: 1px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50% , -50%);
-}
-
-.box .text small{
-    display: block;
-    font-weight: 600;
-}
-.circle{
-    width: 100%;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid #fff; */
-}
-
-.circle .points{
-    width: 2px;
-    height: 10px;
-    background-color: var(--bg-color);
-    position: absolute;
-    border-radius: 3px;
-    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
-}
-
-.points.marked{
-    animation: glow 0.04s linear forwards;
-    animation-delay: calc(var(--i)*0.05s);
-}
 
 
 /* -------------------- Keyframes --------- */
