@@ -1,5 +1,6 @@
 footer{
-    margin-top: 0;
+    width: 100vw;
+    margin-top: 1rem;
     padding: 1.5rem 10%;
     display: flex;
     align-items: center;
