@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <section class="py-8 pt-20 px-6 bg-white text-gray-800 max-w-full mx-auto">
+    <section class="py-8 pt-20 px-6 bg-gradient-to-l from-gray-400 to-gray-100 text-gray-800 max-w-full mx-auto">
       <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
       <p class="mb-4">
         I’m <strong>Suraj Chaudhary</strong>, a passionate Full-Stack Web

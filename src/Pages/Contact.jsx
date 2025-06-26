@@ -2,7 +2,7 @@ import React from "react";
 
 const Contact = () => {
   return (
-   <section class="pt-20 px-6 bg-white mb-4">
+   <section class="pt-20 px-6 bg-gradient-to-l from-gray-400 to-gray-100 mb-4">
   <h2 class="text-3xl font-bold text-center mb-8">📬 Contact Me</h2>
   
   <p class="text-center text-gray-600 max-w-full text-xl mx-auto mb-6">
@@ -21,7 +21,7 @@ const Contact = () => {
     </div>
 
 
-    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-2">
+    <form action="https://formspree.io/f/your-form-id" method="POST" class="space-y-2 bg-gradient-to-r from-gray-200 to-gray-50 mb-4 p-4 rounded-2xl shadow-lg">
       <div>
         <label class="block text-gray-700 font-medium mb-1">Name</label>
         <input type="text" name="name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />

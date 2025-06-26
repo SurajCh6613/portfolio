@@ -2,7 +2,7 @@ import React from "react";
 
 const Certifications = () => {
   return (
-    <section class="py-8 pt-20  px-6 bg-gray-50">
+    <section class="py-8 pt-20  px-6 bg-gradient-to-r from-gray-400 to-gray-100">
       <h2 class="text-3xl font-bold mb-8 text-center">📜 Certifications</h2>
       <ul class="max-w-3xl mx-auto text-gray-700 space-y-4 list-disc list-inside text-lg">
         <li>
