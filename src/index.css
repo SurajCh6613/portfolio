@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 
-body{
-    background-color: #F1F5F9;
+.btn {
+    background-color: #2791e8;
+    padding: .5rem;
+    border-radius: .7rem;
+    color: white;
 }
+.btn:hover{
+    background-color: blue;
+    transform: scale(1.05);
+    transition-duration: .3s;
+}
+ .btn2{
+    background-color: rgb(106, 110, 101);
+ }
