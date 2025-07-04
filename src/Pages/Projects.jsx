@@ -3,15 +3,6 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
-      title: "FinGenius – AI-Powered Smart Finance Management",
-      emoji: "🧠",
-      description:
-        "Full-stack finance tracker built with Next.js, Supabase, Prisma, and Clerk. Includes email notifications (Inngest) and a beautiful UI with Tailwind + ShadCN.",
-      tech: ["Next.js", "Supabase", "Prisma", "Clerk", "Inngest", "Tailwind"],
-      github: "#",
-      liveDemo: "#",
-    },
-    {
       title: "Task Manager – Productivity App (MERN)",
       emoji: "✅",
       description:
@@ -21,11 +12,11 @@ const Projects = () => {
       liveDemo: "https://task-manager-frontend-53qs.onrender.com/",
     },
     {
-      title: "Jobsphere – Job Portal Web App",
+      title: "AI-Powered Code Reviewer",
       emoji: "🌐",
       description:
-        "A full-featured MERN-based job portal with role-based access, job filtering, and responsive design.",
-      tech: ["React", "Node.js", "Express", "MongoDB"],
+        "A full-featured MERN-based AI-Powered Code Reviewer for review Code to make clean, efficient, and scalable code.",
+      tech: ["React", "Node.js", "Express", "MongoDB","Gemini AI"],
       github: "#",
       liveDemo: "#",
     },
@@ -54,7 +45,7 @@ const Projects = () => {
             <p class="text-sm text-gray-500 mb-4">
               Tech:{" "}
               {project.tech.map((tech) => (
-                <p className="inline ml-2">{tech}</p>
+                <p className="inline ml-2 border rounded-md px-1.5 shadow-md py-1">{tech}</p>
               ))}
             </p>
             <a href={project.github} target="_blank" class="btn mr-4">

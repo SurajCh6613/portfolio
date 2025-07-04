@@ -29,12 +29,11 @@ const About = () => {
       <ul class="mb-6">
         <li>
           🎯 <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB,
-          Java, MySQL, Tailwind CSS, Git, Prisma, Supabase, Next.js
+          Java, MySQL, Tailwind CSS, Git
         </li>
         <li>
           🏆 <strong>Highlights:</strong> Winner of Java Coding Competition |
-          Built 5+ full-stack projects | Top performer in college-level
-          hackathons
+          Built 5+ full-stack projects
         </li>
         <li>
           📍 <strong>Location:</strong> Basti, Uttar Pradesh
