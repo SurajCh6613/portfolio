@@ -29,7 +29,7 @@ const Contact = () => {
       );
   };
   return (
-    <section className="pt-12 px-6 bg-gray-700 text-white pb-10">
+    <section className="pt-20 px-6 bg-gray-700 text-white pb-10">
       <h2 className="text-4xl font-extrabold text-center mb-6">
         📬 Contact Me
       </h2>
