@@ -16,8 +16,8 @@ const Projects = () => {
       emoji: "🌐",
       description:
         "A full-featured MERN-based AI-Powered Code Reviewer for review Code to make clean, efficient, and scalable code.",
-      tech: ["React", "Node.js", "Express", "MongoDB","Gemini AI"],
-      github: "#",
+      tech: ["React", "Node.js", "Express", "MongoDB", "Gemini AI"],
+      github: "https://github.com/SurajCh6613/code-reviewer",
       liveDemo: "#",
     },
     {
@@ -34,9 +34,14 @@ const Projects = () => {
   return (
     <section class="py-16 px-6 bg-gradient-to-l from-gray-400 to-gray-100 pt-20 ">
       <h2 class="text-3xl font-bold mb-8 text-center">💼 Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 max-w-5xl mx-auto">
+      <div class="flex flex-col gap-10 ">
         {projects.map((project, index) => (
-          <div key={index} class="bg-white rounded-2xl shadow-lg p-6 hover:scale-105 duration-300 ">
+          <div
+            key={index}
+            class={`bg-white rounded-2xl shadow-lg p-6 hover:scale-105 duration-300 w-1/2 ${
+              index % 2 === 0 ? `flex-row` : `flex-row-reverse`
+            }`}
+          >
             <h3 class="text-2xl font-semibold mb-2">
               {project.emoji}
               {project.title}
@@ -45,7 +50,9 @@ const Projects = () => {
             <p class="text-sm text-gray-500 mb-4">
               Tech:{" "}
               {project.tech.map((tech) => (
-                <p className="inline ml-2 border rounded-md px-1.5 shadow-md py-1">{tech}</p>
+                <p className="inline ml-2 border rounded-md px-1.5 shadow-md py-1">
+                  {tech}
+                </p>
               ))}
             </p>
             <a href={project.github} target="_blank" class="btn mr-4">
