@@ -1,7 +1,33 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
 
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs
+      .sendForm(
+        "service_lnvfs8c",
+        "template_0e9kdtj",
+        form.current,
+        "AAgmPH08wDDiFW1a6"
+      )
+      .then(
+        (result) => {
+          toast.success("✅ Message sent successfully!", {
+            position: "top-right",
+          });
+          form.current.reset();
+        },
+        (error) => {
+          toast.error("❌ Failed to send message. Please try again.", {
+            position: "top-right",
+          });
+        }
+      );
+  };
   return (
     <section className="pt-12 px-6 bg-gray-700 text-white pb-10">
       <h2 className="text-4xl font-extrabold text-center mb-6">
@@ -57,7 +83,11 @@ const Contact = () => {
         </div>
 
         {/* Contact Form */}
-        <form className="space-y-4 bg-gray-700 backdrop-blur-lg p-6 rounded-2xl shadow-lg">
+        <form
+          ref={form}
+          onSubmit={sendEmail}
+          className="space-y-4 bg-gray-700 backdrop-blur-lg p-6 rounded-2xl shadow-lg"
+        >
           <div>
             <label className="block font-medium mb-1">Name</label>
             <input
@@ -96,6 +126,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
+      <ToastContainer />
     </section>
   );
 };

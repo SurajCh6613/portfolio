@@ -5,9 +5,6 @@ const About = () => {
   return (
     <section className="py-16 px-6 bg-gray-700 text-white w-full">
       <h2
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
         className="text-4xl font-extrabold mb-10 text-center"
       >
         About Me
