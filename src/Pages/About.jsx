@@ -1,45 +1,74 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section class="py-8 pt-20 px-6 bg-gradient-to-l from-gray-400 to-gray-100 text-gray-800 max-w-full mx-auto">
-      <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
-      <p class="mb-4">
-        I’m <strong>Suraj Chaudhary</strong>, a passionate Full-Stack Web
-        Developer with a strong foundation in the MERN stack (MongoDB,
-        Express.js, React, Node.js) and backend technologies like Java and SQL.
-      </p>
-      <p class="mb-4">
-        Currently in my final year of B.Tech in Computer Science from Dr. APJ
-        Abdul Kalam Technical University, I’ve built real-world projects like{" "}
-        <strong>FinGenius</strong>, <strong>Task Manager</strong>, and a{" "}
-        <strong>Doctor Appointment Platform</strong>.
-      </p>
-      <p class="mb-4">
-        I enjoy building end-to-end solutions that are not just functional, but
-        also intuitive and user-centric. With over 230+ problems solved on
-        LeetCode and 200+ on CodeChef, I also have a deep interest in algorithms
-        and performance optimization.
-      </p>
-      <p class="mb-6">
-        When I’m not coding, I’m either exploring new tools in the JavaScript
-        ecosystem, participating in coding contests, or contributing to
-        open-source.
-      </p>
-      <ul class="mb-6">
+    <section className="py-16 px-6 bg-gray-700 text-white w-full">
+      <h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="text-4xl font-extrabold mb-10 text-center"
+      >
+        About Me
+      </h2>
+
+      <div className="space-y-6 text-lg px-6">
+        <p>
+          I’m <strong className="text-yellow-300">Suraj Chaudhary</strong>, a
+          passionate Full-Stack Web Developer skilled in the{" "}
+          <span className="text-yellow-300 font-semibold">MERN stack</span> and
+          backend development.
+        </p>
+        <p>
+          I recently completed my B.Tech at{" "}
+          <strong className="text-yellow-300">
+            Dr. APJ Abdul Kalam Technical University
+          </strong>
+          . My projects include{" "}
+          <span className="text-yellow-300 font-semibold">ReferrLink</span>,{" "}
+          <span className="text-yellow-300 font-semibold">
+            AI-Powered Code Reviewer
+          </span>
+          , <span className="text-yellow-300 font-semibold">Task Manager</span>,
+          and a{" "}
+          <span className="text-yellow-300 font-semibold">
+            Doctor Appointment Platform
+          </span>
+          .
+        </p>
+        <p>
+          I’ve solved <span className="text-yellow-300 font-bold">260+</span>{" "}
+          problems on LeetCode and{" "}
+          <span className="text-yellow-300 font-bold">200+</span> on CodeChef —
+          sharpening my algorithmic thinking and problem-solving skills.
+        </p>
+        <p>
+          Beyond coding, I enjoy exploring new JavaScript tools, participating
+          in coding contests, and contributing to open-source projects.
+        </p>
+      </div>
+
+      <ul className="mt-10 space-y-3 text-base sm:text-lg px-6">
         <li>
-          🎯 <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB,
-          Java, MySQL, Tailwind CSS, Git
+          🎯 <span className="font-semibold">Tech Stack:</span> React, Node.js,
+          Express, MongoDB, Java, MySQL, Tailwind CSS, Git
         </li>
         <li>
-          🏆 <strong>Highlights:</strong> Winner of Java Coding Competition |
-          Built 5+ full-stack projects
+          🏆 <span className="font-semibold">Highlights:</span> Java Coding
+          Competition Winner | 5+ full-stack projects
         </li>
         <li>
-          📍 <strong>Location:</strong> Basti, Uttar Pradesh
+          📍 <span className="font-semibold">Current Location:</span> Noida,
+          Uttar Pradesh
         </li>
         <li>
-          🧠 <strong>Mindset:</strong> Learn. Build. Improve.
+          📍 <span className="font-semibold">Hometown:</span> Basti, Uttar
+          Pradesh
+        </li>
+        <li>
+          🧠 <span className="font-semibold">Mindset:</span> Learn. Build.
+          Improve.
         </li>
       </ul>
     </section>

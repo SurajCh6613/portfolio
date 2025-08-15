@@ -6,44 +6,19 @@ const Skills = () => {
       category: "Programming Languages",
       emoji: "💻",
       skills: [
-        {
-          skill: "Java",
-          image: "/assets/Skills/java.svg",
-        },
-        {
-          skill: "JavaScript",
-          image: "/assets/Skills/javascript.svg",
-        },
-        {
-          skill: "C",
-          image: "/assets/Skills/c.svg",
-        },
+        { skill: "Java", image: "/assets/Skills/java.svg" },
+        { skill: "JavaScript", image: "/assets/Skills/javascript.svg" },
+        { skill: "C", image: "/assets/Skills/c.svg" },
       ],
     },
     {
       category: "Frontend Development",
       emoji: "🌐",
-      //   skills: [{
-      //   skill: "HTML",
-      //   image: "/assets/Skills/html5.svg",
-      // }, CSS3", "React.js", "Tailwind CSS", "Next.js"],
       skills: [
-        {
-          skill: "HTML",
-          image: "/assets/Skills/html5.svg",
-        },
-        {
-          skill: "CSS",
-          image: "/assets/Skills/css.svg",
-        },
-        {
-          skill: "React",
-          image: "/assets/Skills/react.svg",
-        },
-        {
-          skill: "Tailwind",
-          image: "/assets/Skills/tailwindcss.svg",
-        },
+        { skill: "HTML", image: "/assets/Skills/html5.svg" },
+        { skill: "CSS", image: "/assets/Skills/css.svg" },
+        { skill: "React", image: "/assets/Skills/react.svg" },
+        { skill: "Tailwind", image: "/assets/Skills/tailwindcss.svg" },
       ],
     },
     {
@@ -53,67 +28,32 @@ const Skills = () => {
         {
           skill: "Node",
           image: "/assets/Skills/nodedotjs.svg",
+          style: "bg-yellow-200",
         },
         {
           skill: "Express",
           image: "/assets/Skills/express.svg",
+          style: "bg-yellow-200",
         },
-        // {
-        //   skill: "Restful API's",
-        //   image: "/assets/Skills/react.svg",
-        // },
-        // {
-        //   skill: "Tailwind",
-        //   image: "/assets/Skills/tailwindcss.svg",
-        // },
       ],
     },
     {
       category: "Databases",
       emoji: "🗃️",
       skills: [
-        {
-          skill: "MongoDB",
-          image: "/assets/Skills/mongodb.svg",
-        },
-        {
-          skill: "SQL",
-          image: "/assets/Skills/sql.svg",
-        },
-        // {
-        //   skill: "React",
-        //   image: "/assets/Skills/react.svg",
-        // },
-        // {
-        //   skill: "Tailwind",
-        //   image: "/assets/Skills/tailwindcss.svg",
-        // },
+        { skill: "MongoDB", image: "/assets/Skills/mongodb.svg" },
+        { skill: "SQL", image: "/assets/Skills/sql.svg" },
       ],
     },
     {
       category: "Tools & Platforms",
       emoji: "⚙️",
       skills: [
-        {
-          skill: "Git",
-          image: "/assets/Skills/git.svg",
-        },
-        {
-          skill: "GitHub",
-          image: "/assets/Skills/github.svg",
-        },
-        {
-          skill: "VS Code",
-          image: "/assets/Skills/vscode.svg",
-        },
-        {
-          skill: "Postman",
-          image: "/assets/Skills/postman.svg",
-        },
-        {
-          skill: "Vercel",
-          image: "/assets/Skills/vercel.svg",
-        },
+        { skill: "Git", image: "/assets/Skills/git.svg" },
+        { skill: "GitHub", image: "/assets/Skills/github.svg",style:'bg-white', },
+        { skill: "VS Code", image: "/assets/Skills/vscode.svg" },
+        { skill: "Postman", image: "/assets/Skills/postman.svg" },
+        // { skill: "Vercel", image: "/assets/Skills/vercel.svg",style:'bg-white', },
       ],
     },
     {
@@ -122,42 +62,53 @@ const Skills = () => {
       skills: [
         {
           skill: "JWT",
-style:"bg-green-600",
           image: "/assets/Skills/jsonwebtokens.svg",
+          style: "bg-green-600",
         },
         {
-          style: "bg-yellow-600",
           skill: "Leetcode",
           image: "/assets/Skills/leetcode.svg",
+          style: "bg-yellow-600",
         },
-        {
-          skill: "Bcrypt",
-          image: "/assets/Skills/letsencrypt.svg",
-        },
+        { skill: "Bcrypt", image: "/assets/Skills/letsencrypt.svg",style:'bg-white', },
       ],
     },
   ];
 
   return (
-    <section className="py-8 px-6 bg-gradient-to-l from-gray-100 to-gray-300 pt-20 ">
-      <h2 className="text-3xl font-bold text-center mb-8">🛠 Skills</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-full mx-auto text-gray-800">
-        {skills.map((skill, index) => (
+    <section className="py-8 px-6 bg-gray-800 pt-20">
+      <h2 className="text-3xl font-bold text-center mb-8 text-white">
+        🛠 Skills
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-full mx-auto">
+        {skills.map(({ category, emoji, skills }, index) => (
           <div
-            key={index}
-            className="shadow-lg p-2 rounded-lg hover:scale-105 duration-300"
+            key={category}
+            className="shadow-lg p-4 rounded-lg bg-gray-700 hover:scale-105 transform transition duration-300"
           >
-            <h3 className="font-semibold text-lg mb-2 text-center">
-              {skill.emoji} {skill.category}
+            <h3 className="font-semibold text-lg mb-4 text-center text-yellow-300">
+              {emoji} {category}
             </h3>
-            <ul className="list-inside pl-4 flex justify-around text-center">
-              {skill.skills.map((skill) => (
-                <li key={skill} className="ml-2">
-                  <img
-                    src={skill.image}
-                    className={`${skill.style} rounded-md w-12 h-12`}
-                  ></img>{" "}
-                  {skill.skill}
+            <ul className="flex flex-wrap justify-center gap-6">
+              {skills.map(({ skill, image, style }) => (
+                <li
+                  key={skill}
+                  className="flex flex-col items-center space-y-1 cursor-pointer group"
+                >
+                  <div
+                    className={`p-2 rounded-md ${
+                      style ? style : "bg-gray-900"
+                    } shadow-md`}
+                  >
+                    <img
+                      src={image}
+                      alt={skill}
+                      className="w-12 h-12 object-contain"
+                    />
+                  </div>
+                  <span className="text-white text-sm font-medium group-hover:text-yellow-400">
+                    {skill}
+                  </span>
                 </li>
               ))}
             </ul>

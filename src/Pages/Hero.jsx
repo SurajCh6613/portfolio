@@ -1,33 +1,53 @@
 import React from "react";
 import heroImage from "../assets/heroImage.png";
+import { Link } from "react-router-dom";
+
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-l from-gray-600 to-gray-400  pt-20 w-full h-full flex flex-col-reverse md:flex-row py-3 px-2">
-      <div className="w-full md:w-2/3 h-full pl-2 pt-4">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl mb-1 sm:mb-6">
-          Hi, I'm Suraj Chaudhary{" "}
+    <section className="bg-gray-800 pt-20 pb-10 px-6 w-full min-h-screen flex flex-col-reverse md:flex-row items-center justify-between">
+      {/* Text Section */}
+      <div
+        className="w-full md:w-2/3 text-white"
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4">
+          Hi, I'm{" "}
+          <span className="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
+            Suraj Chaudhary
+          </span>
         </h1>
-        <div className="text-xl md:text-3xl mb-1 sm:mb-6">
+
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-200 mb-4">
           Full-Stack Web Developer | MERN Stack Enthusiast
-        </div>
-        <p className="text-md md:text-2xl text-shadow-gray-950 mb-1 sm:mb-6 md:pr-6">
-          I craft responsive, user-focused applications using modern
-          technologies like React, Node.js, and MongoDB. Passionate about
-          building clean, scalable code and solving real-world problems with
-          intuitive solutions.
+        </h2>
+
+        <p className="text-md md:text-xl text-gray-100 mb-4">
+          I craft responsive, user-focused applications using modern tech like
+          React, Node.js, and MongoDB.
         </p>
-        <p className="text-gray-900 md:text-xl mb-1 sm:mb-6">
+
+        <p className="text-gray-200 md:text-lg mb-6">
           Explore my work or let’s build something together!
         </p>
-        <div className=" space-x-2 mb-6">
-          <button className="btn btn2">View projects</button>
-          <button className="btn">Download Resume</button>
+
+        <div className="flex gap-4">
+          <Link to={'/projects'} className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-md shadow-lg transition duration-300 ease-in-out">
+            View Projects
+          </Link>
+          <a href="https://drive.google.com/file/d/12vyh9ZxhHIkadhbiZ52glkbO9M0lWptv/view?usp=drive_link" target="_blank" className="px-6 py-3 border-2 border-white hover:bg-white hover:text-black text-white font-semibold rounded-md shadow-lg transition duration-300 ease-in-out">
+            Download Resume
+          </a>
         </div>
       </div>
-      <div className="w-full md:w-1/3">
-        <div className="flex justify-center items-center">
-          <img src={heroImage} alt="" className=" w-[12rem] h-[15rem] sm:w-[18rem] sm:h-[20rem] md:w-[26rem] md:h-[30rem] rounded-[50%] shadow-amber-100 shadow-lg border-white" />
-        </div>
+
+      {/* Image Section */}
+      <div
+        className="w-full md:w-1/3 flex justify-center items-center mb-10 md:mb-0"
+      >
+        <img
+          src={heroImage}
+          alt="Suraj"
+          className="w-[12rem] h-[15rem] sm:w-[18rem] sm:h-[20rem] md:w-[22rem] md:h-[26rem] object-cover shadow-2xl border-r-8 border-b-8 border-gray-700 transition-transform duration-500 hover:scale-105"
+        />
       </div>
     </section>
   );
