@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section className="py-16 px-6 bg-gray-700 text-white w-full">
+    <section className="py-16 px-1 md:px-6 bg-gray-700 text-white w-full">
       <h2
         className="text-4xl font-extrabold mb-10 text-center"
       >

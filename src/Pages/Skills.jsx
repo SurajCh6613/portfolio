@@ -103,7 +103,7 @@ const Skills = () => {
                     <img
                       src={image}
                       alt={skill}
-                      className="w-12 h-12 object-contain"
+                      className="w-6 h-6 md:w-8 md:h-8 lg:w-12 lg:h-12 object-contain"
                     />
                   </div>
                   <span className="text-white text-sm font-medium group-hover:text-yellow-400">
