@@ -9,10 +9,10 @@ const Contact = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        process.env.Service_ID,
-        process.env.Template_ID,
+        "service_wrxh1xf",
+        "template_u6tout1",
         form.current,
-        process.env.Public_key
+        "AAgmPH08wDDiFW1a6"
       )
       .then(
         (result) => {
