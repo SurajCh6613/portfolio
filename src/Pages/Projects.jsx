@@ -75,6 +75,17 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
+      title: "ReferrLink – Professional Referral Platform (MERN)",
+      emoji: "🤝",
+      description:
+        "A platform where juniors can professionally request job referrals from seniors, and seniors can respond if the junior is a good fit. Includes JWT authentication, profile management, and referral request workflow.",
+      tech: ["MongoDB", "Express", "React", "Node.js", "JWT", "Tailwind CSS"],
+      github: "https://github.com/SurajCh6613/referrlink",
+      liveDemo: "https://referrlink.vercel.app/",
+      image: "/assets/projects/referrlink.png",
+    },
+
+    {
       title: "Task Manager – Productivity App (MERN)",
       emoji: "✅",
       description:
@@ -157,7 +168,11 @@ const Projects = () => {
             </div>
             {/* Right section */}
             <div className="hidden w-full md:flex md:w-1/4  justify-center items-center">
-              <img src={project.image} alt="" className="md:w-[100%] h-[100%] p-8" />
+              <img
+                src={project.image}
+                alt=""
+                className="md:w-[100%] h-[100%] p-8"
+              />
             </div>
           </div>
         ))}
