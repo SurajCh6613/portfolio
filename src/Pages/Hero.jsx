@@ -30,6 +30,19 @@ const Hero = () => {
           Explore my work or let’s build something together!
         </p>
 
+        {/* Social Links */}
+        <div className="mt-4 flex space-x-4 text-5xl mb-4">
+          <a target="_blank" href="https://www.linkedin.com/in/surajch6613/">
+            <FaLinkedin className="hover:scale-105 duration-300" />
+          </a>
+          <a target="_blank" href="https://github.com/SurajCh6613">
+            <FaSquareGithub className="hover:scale-105 duration-300" />
+          </a>
+          <a target="_blank" href="https://leetcode.com/u/Surajch6613/">
+            <SiLeetcode className="hover:scale-105 duration-300 hover:text-yellow-400" />
+          </a>
+        </div>
+
         <div className="flex gap-4">
           <Link
             to={"/projects"}
@@ -43,18 +56,6 @@ const Hero = () => {
             className=" px-2 py-2 md:px-6 md:py-3 border-2 border-white hover:bg-white hover:text-black text-white font-semibold rounded-md shadow-lg transition duration-300 ease-in-out"
           >
             Download Resume
-          </a>
-        </div>
-        {/* Social Links */}
-        <div className="mt-4 flex space-x-4 text-5xl">
-          <a target="_blank" href="https://www.linkedin.com/in/surajch6613/">
-            <FaLinkedin className="hover:scale-105 duration-300" />
-          </a>
-          <a target="_blank" href="https://github.com/SurajCh6613">
-            <FaSquareGithub className="hover:scale-105 duration-300" />
-          </a>
-          <a target="_blank" href="https://leetcode.com/u/Surajch6613/">
-            <SiLeetcode className="hover:scale-105 duration-300 hover:text-yellow-400" />
           </a>
         </div>
       </div>
