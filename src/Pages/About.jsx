@@ -4,13 +4,9 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <section className="py-16 px-1 md:px-6 bg-gray-700 text-white w-full">
-      <h2
-        className="text-4xl font-extrabold mb-10 text-center"
-      >
-        About Me
-      </h2>
+      <h2 className="text-4xl font-extrabold mb-6 text-center">About Me</h2>
 
-      <div className="space-y-6 text-lg px-6">
+      <div className="space-y-4 text-lg px-6">
         <p>
           I’m <strong className="text-yellow-300">Suraj Chaudhary</strong>, a
           passionate Full-Stack Web Developer skilled in the{" "}
@@ -18,11 +14,13 @@ const About = () => {
           backend development.
         </p>
         <p>
-          I recently completed my B.Tech at{" "}
+          🎓 B.Tech CSE Graduate (2021–2025) from{" "}
           <strong className="text-yellow-300">
             Dr. APJ Abdul Kalam Technical University
           </strong>
-          . My projects include{" "}
+        </p>
+        <p>
+          🚀 Built projects like
           <span className="text-yellow-300 font-semibold">ReferrLink</span>,{" "}
           <span className="text-yellow-300 font-semibold">
             AI-Powered Code Reviewer
@@ -35,18 +33,18 @@ const About = () => {
           .
         </p>
         <p>
-          I’ve solved <span className="text-yellow-300 font-bold">260+</span>{" "}
+          🧩 Solved <span className="text-yellow-300 font-bold">280+</span>{" "}
           problems on LeetCode and{" "}
           <span className="text-yellow-300 font-bold">200+</span> on CodeChef —
           sharpening my algorithmic thinking and problem-solving skills.
         </p>
         <p>
-          Beyond coding, I enjoy exploring new JavaScript tools, participating
-          in coding contests, and contributing to open-source projects.
+        🤝 Passionate about clean code, problem-solving, and collaboration
         </p>
+        <p>🌱 Seeking opportunities in Java Development / Full-Stack Development</p>
       </div>
 
-      <ul className="mt-10 space-y-3 text-base sm:text-lg px-6">
+      <ul className="mt-10 space-y-1  sm:text-lg px-6">
         <li>
           🎯 <span className="font-semibold">Tech Stack:</span> React, Node.js,
           Express, MongoDB, Java, MySQL, Tailwind CSS, Git

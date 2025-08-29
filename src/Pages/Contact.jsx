@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
+import { FaLinkedin } from "react-icons/fa";
+import { FaSquareGithub } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 
 const Contact = () => {
   const form = useRef();
@@ -30,21 +33,23 @@ const Contact = () => {
   };
   return (
     <section className="pt-20 px-6 bg-gray-700 text-white pb-10">
-      <h2 className="text-4xl font-extrabold text-center mb-6">
+      <h2 className="text-4xl font-extrabold text-center mb-2">
         📬 Contact Me
       </h2>
 
-      <p className="text-center max-w-2xl text-lg mx-auto mb-10">
+      <p className="text-center max-w-2xl text-lg mx-auto mb-6">
         I'm always open to connecting, collaborating, or discussing exciting
-        opportunities. Whether it's a freelance project, internship, or
-        full-time role — feel free to reach out!
+        opportunities.
       </p>
 
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         {/* Contact Info */}
         <div className="text-gray-200 text-lg space-y-6 bg-gray-700 backdrop-blur-md p-6 rounded-2xl shadow-md">
           <p>
-            📍 <strong>Location:</strong> Basti, Uttar Pradesh, India
+            📍 <strong>Current Location :</strong> Noida, Uttar Pradesh, India
+          </p>
+          <p>
+            📍 <strong>Hometown :</strong> Basti, Uttar Pradesh, India
           </p>
           <p>
             📧 <strong>Email:</strong>
@@ -55,28 +60,18 @@ const Contact = () => {
               surajchaudhary6613@gmail.com
             </a>
           </p>
-          <p>
-            💼 <strong>LinkedIn:</strong>
-            <a
-              href="https://linkedin.com/in/surajch6613"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-blue-500 ml-1"
-            >
-              Surajch6613
+          {/* Social Links */}
+          <div className="mt-4 flex space-x-4 text-5xl">
+            <a target="_blank" href="https://www.linkedin.com/in/surajch6613/">
+              <FaLinkedin className="hover:scale-105 duration-300" />
             </a>
-          </p>
-          <p>
-            💻 <strong>GitHub:</strong>
-            <a
-              href="https://github.com/surajch6613"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-blue-500 ml-1"
-            >
-              Surajch6613
+            <a target="_blank" href="https://github.com/SurajCh6613">
+              <FaSquareGithub className="hover:scale-105 duration-300" />
             </a>
-          </p>
+            <a target="_blank" href="https://leetcode.com/u/Surajch6613/">
+              <SiLeetcode className="hover:scale-105 duration-300 hover:text-yellow-400" />
+            </a>
+          </div>
           <p className="mt-4 font-medium">
             Let’s build something amazing together 🚀
           </p>
@@ -86,7 +81,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="space-y-4 bg-gray-700 backdrop-blur-lg p-6 rounded-2xl shadow-lg"
+          className="space-y-3 bg-gray-700 backdrop-blur-lg p-6 rounded-2xl shadow-lg"
         >
           <div>
             <label className="block font-medium mb-1">Name</label>
@@ -112,7 +107,7 @@ const Contact = () => {
             <label className="block font-medium mb-1">Message</label>
             <textarea
               name="message"
-              rows="4"
+              rows="2"
               required
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             ></textarea>

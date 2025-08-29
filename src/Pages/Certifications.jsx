@@ -18,7 +18,7 @@ const certifications = [
 
 const Certifications = () => {
   return (
-    <section className="py-12 pt-20 px-6 bg-gray-800 text-white">
+    <section className="py-12 pt-20 px-6 bg-gray-800 text-white min-h-screen">
       <h2 className="text-4xl font-extrabold mb-10 text-center">
         📜 Certifications
       </h2>

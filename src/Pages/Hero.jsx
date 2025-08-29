@@ -1,14 +1,15 @@
 import React from "react";
 import heroImage from "../assets/heroImage.png";
 import { Link } from "react-router-dom";
+import { SiLeetcode } from "react-icons/si";
+import { FaSquareGithub } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
 
 const Hero = () => {
   return (
     <section className="bg-gray-800 pt-20 pb-10 px-6 w-full md:min-h-screen flex flex-col-reverse md:flex-row items-center justify-between">
       {/* Text Section */}
-      <div
-        className="w-full md:w-2/3 text-white"
-      >
+      <div className="w-full md:w-2/3 text-white">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4">
           Hi, I'm{" "}
           <span className="bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent">
@@ -30,19 +31,36 @@ const Hero = () => {
         </p>
 
         <div className="flex gap-4">
-          <Link to={'/projects'} className=" px-2 py-2 md:px-6 md:py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-md shadow-lg transition duration-300 ease-in-out">
+          <Link
+            to={"/projects"}
+            className=" px-2 py-2 md:px-6 md:py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-md shadow-lg transition duration-300 ease-in-out"
+          >
             View Projects
           </Link>
-          <a href="https://drive.google.com/file/d/12vyh9ZxhHIkadhbiZ52glkbO9M0lWptv/view?usp=drive_link" target="_blank" className=" px-2 py-2 md:px-6 md:py-3 border-2 border-white hover:bg-white hover:text-black text-white font-semibold rounded-md shadow-lg transition duration-300 ease-in-out">
+          <a
+            href="https://drive.google.com/file/d/12vyh9ZxhHIkadhbiZ52glkbO9M0lWptv/view?usp=drive_link"
+            target="_blank"
+            className=" px-2 py-2 md:px-6 md:py-3 border-2 border-white hover:bg-white hover:text-black text-white font-semibold rounded-md shadow-lg transition duration-300 ease-in-out"
+          >
             Download Resume
+          </a>
+        </div>
+        {/* Social Links */}
+        <div className="mt-4 flex space-x-4 text-5xl">
+          <a target="_blank" href="https://www.linkedin.com/in/surajch6613/">
+            <FaLinkedin className="hover:scale-105 duration-300" />
+          </a>
+          <a target="_blank" href="https://github.com/SurajCh6613">
+            <FaSquareGithub className="hover:scale-105 duration-300" />
+          </a>
+          <a target="_blank" href="https://leetcode.com/u/Surajch6613/">
+            <SiLeetcode className="hover:scale-105 duration-300 hover:text-yellow-400" />
           </a>
         </div>
       </div>
 
       {/* Image Section */}
-      <div
-        className="w-full md:w-1/3 flex justify-center items-center mb-10 md:mb-0"
-      >
+      <div className="w-full md:w-1/3 flex justify-center items-center mb-10 md:mb-0">
         <img
           src={heroImage}
           alt="Suraj"
