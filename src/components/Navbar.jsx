@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <a href="#home" className="text-3xl font-bold text-gradient">
-        Suraj
+        {"<Suraj />"}
       </a>
 
       {/* Desktop Nav */}
