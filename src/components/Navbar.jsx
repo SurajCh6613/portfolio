@@ -1,47 +1,80 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdMenu } from "react-icons/md";
-import { Link } from "react-router-dom";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
 
-  const navItems = (
-    <>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/skills">Skills</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/certifications">Certification</Link>
-      <Link to="/contact">Contact</Link>
-    </>
-  );
+  const navItems = [
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+  ];
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="flex justify-between items-center px-4 py-3 shadow-lg fixed w-full bg-gray-800 z-50">
-      <Link to="/" className="text-3xl cursor-pointer bg-gradient-to-r from-yellow-400 to-red-500 bg-clip-text text-transparent font-bold">Suraj</Link>
-      <ul className="flex space-x-8 text-xl cursor-pointer hidden md:flex text-white">
-        {navItems}
+    <div
+      className={`flex justify-between items-center px-6 md:px-18 py-3 fixed w-full z-50         transition-all duration-300 
+        ${
+          scrolled
+            ? "backdrop-blur-xl bg-secondary/40 border-b border-border shadow-lg"
+            : "bg-transparent"
+        }`}
+    >
+      {/* Logo */}
+      <a href="#home" className="text-3xl font-bold text-gradient">
+        Suraj
+      </a>
+
+      {/* Desktop Nav */}
+      <ul className="hidden md:flex space-x-8 text-white text-lg">
+        {navItems.map((nav) => (
+          <a key={nav.name} href={nav.href}>
+            {nav.name}
+          </a>
+        ))}
+        <a href="#contact" className="bg-primary text-black px-2 rounded-md cursor-pointer hover:scale-105 duration-300">Hire Me</a>
       </ul>
-      {/* Mobile Navigation */}
+
+      {/* Mobile Drawer */}
       <div
-        className={`absolute top-0 left-0 bg-gray-700 text-white  shadow-lg w-1/2 px-4 py-12 h-[100vh] duration-300 ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 w-full bg-[rgb(10,12,16)] text-white px-4 py-12 rounded-b-3xl shadow-lg duration-300 ${
+          isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <button
           onClick={toggleDrawer}
-          className="absolute right-0 p-4 text-2xl top-0"
+          className="absolute right-4 top-4 text-3xl"
         >
           X
         </button>
-        <ul className="flex flex-col space-y-4 text-xl items-center" onClick={toggleDrawer}>{navItems}</ul>
+
+        <ul
+          className="flex flex-col items-center space-y-6 text-xl mt-8"
+          onClick={toggleDrawer}
+        >
+          {navItems.map((nav) => (
+            <a key={nav.name} href={nav.href}>
+              {nav.name}
+            </a>
+          ))}
+        </ul>
       </div>
 
-
+      {/* Mobile Menu Button */}
       <button
         onClick={toggleDrawer}
-        className={`md:hidden text-2xl text-white ${isOpen ? "hidden" : ""}`}
+        className={`md:hidden text-white text-3xl ${isOpen ? "hidden" : ""}`}
       >
         <MdMenu />
       </button>

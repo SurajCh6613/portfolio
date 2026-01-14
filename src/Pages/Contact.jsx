@@ -1,11 +1,14 @@
-import React, { useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Mail, MapPin, Send } from "lucide-react";
 import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
-import { FaLinkedin } from "react-icons/fa";
-import { FaSquareGithub } from "react-icons/fa6";
-import { SiLeetcode } from "react-icons/si";
+import { toast } from "react-toastify";
 
 const Contact = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -19,109 +22,155 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          toast.success("✅ Message sent successfully!", {
-            position: "top-right",
-          });
+          toast.success("Message sent successfully!");
           form.current.reset();
         },
         (error) => {
-          toast.error("❌ Failed to send message. Please try again.", {
-            position: "top-right",
-          });
+          toast.error("Failed to send message. Please try again.");
         }
       );
   };
+
   return (
-    <section className="pt-20 px-6 bg-gray-700 text-white pb-10">
-      <h2 className="text-4xl font-extrabold text-center mb-2">
-        📬 Contact Me
-      </h2>
+    <section
+      id="contact"
+      className="section-padding relative overflow-hidden"
+      ref={ref}
+    >
+      {/* Background Effects */}
+      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-primary/10 rounded-full blur-[128px]" />
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-[128px]" />
 
-      <p className="text-center max-w-2xl text-lg mx-auto mb-6">
-        I'm always open to connecting, collaborating, or discussing exciting
-        opportunities.
-      </p>
-
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-        {/* Contact Info */}
-        <div className="text-gray-200 text-lg space-y-6 bg-gray-700 backdrop-blur-md p-6 rounded-2xl shadow-md">
-          <p>
-            📍 <strong>Current Location :</strong> Noida, Uttar Pradesh, India
-          </p>
-          <p>
-            📍 <strong>Hometown :</strong> Basti, Uttar Pradesh, India
-          </p>
-          <p>
-            📧 <strong>Email:</strong>
-            <a
-              href="mailto:surajchaudhary6613@gmail.com"
-              className="underline hover:text-blue-500 ml-1"
-            >
-              surajchaudhary6613@gmail.com
-            </a>
-          </p>
-          {/* Social Links */}
-          <div className="mt-4 flex space-x-4 text-5xl">
-            <a target="_blank" href="https://www.linkedin.com/in/surajch6613/">
-              <FaLinkedin className="hover:scale-105 duration-300" />
-            </a>
-            <a target="_blank" href="https://github.com/SurajCh6613">
-              <FaSquareGithub className="hover:scale-105 duration-300" />
-            </a>
-            <a target="_blank" href="https://leetcode.com/u/Surajch6613/">
-              <SiLeetcode className="hover:scale-105 duration-300 hover:text-yellow-400" />
-            </a>
-          </div>
-          <p className="mt-4 font-medium">
-            Let’s build something amazing together 🚀
-          </p>
-        </div>
-
-        {/* Contact Form */}
-        <form
-          ref={form}
-          onSubmit={sendEmail}
-          className="space-y-3 bg-gray-700 backdrop-blur-lg p-6 rounded-2xl shadow-lg"
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-8 md:mb-16"
         >
-          <div>
-            <label className="block font-medium mb-1">Name</label>
-            <input
-              type="text"
-              name="name"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
+          <span className="text-primary font-mono text-sm">Get In Touch</span>
+          <h2 className="text-3xl md:text-5xl font-bold mt-2 md:mt-4">
+            Let's <span className="text-gradient">Connect</span>
+          </h2>
+          <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
+            I'm currently open to new opportunities and collaborations. Whether
+            you have a project in mind or just want to say hi, I'd love to hear
+            from you!
+          </p>
+        </motion.div>
 
-          <div>
-            <label className="block font-medium mb-1">Email</label>
-            <input
-              type="email"
-              name="email"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
-          <div>
-            <label className="block font-medium mb-1">Message</label>
-            <textarea
-              name="message"
-              rows="2"
-              required
-              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-3 cursor-pointer rounded-lg font-medium hover:bg-blue-700 transition w-full"
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-start overflow-hidden">
+          {/* Contact Info */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="md:col-span-2 space-y-6"
           >
-            Send Message
-          </button>
-        </form>
+            <div className="glass rounded-xl p-6 hover-lift text-left">
+              <Mail className="w-6 h-6 md:w-8 md:h-8 text-primary mb-1 md:mb-2" />
+              <h3 className="font-semibold md:mb-1 text-left">Email</h3>
+              <a
+                href="mailto:surajchaudhary6613@gmail.com"
+                className="text-muted-foreground hover:text-primary text-xs md:text-lg transition-colors break-words"
+              >
+                surajchaudhary6613@gmail.com
+              </a>
+            </div>
+
+            <div className="glass rounded-xl p-6 hover-lift text-left">
+              <MapPin className="w-6 h-6 md:w-8 md:h-8 text-accent mb-1 md:mb-2" />
+              <h3 className="font-semibold mb-1">Location</h3>
+              <p className="text-muted-foreground text-xs md:text-lg">
+                Current :{" "}
+                <span className="glow-text">Noida, Uttar Pradesh</span>
+              </p>
+              <p className="text-muted-foreground text-xs md:text-lg">
+                Hometown :{" "}
+                <span className="glow-text">Basti, Uttar Pradesh</span>
+              </p>
+            </div>
+          </motion.div>
+
+          {/* Contact Form */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="md:col-span-3"
+          >
+            <form
+              ref={form}
+              onSubmit={sendEmail}
+              className="glass rounded-2xl p-4 sm:p-8 space-y-4 md:space-y-6 w-full"
+            >
+              {/* Name */}
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  placeholder="Full Name"
+                />
+              </div>
+
+              {/* Email */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Email
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+                  placeholder="Your email"
+                />
+              </div>
+
+              {/* Message */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  required
+                  className="w-full px-4 py-3 rounded-lg bg-secondary border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                  placeholder="Tell me about your project..."
+                />
+              </div>
+
+              {/* Button */}
+              <motion.button
+                type="submit"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full py-2 md:py-4 rounded-lg bg-primary/80 text-primary-foreground font-semibold flex items-center justify-center gap-2 hover-glow transition-all cursor-pointer"
+              >
+                <Send className="w-5 h-5" /> Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
       </div>
-      <ToastContainer />
     </section>
   );
 };
