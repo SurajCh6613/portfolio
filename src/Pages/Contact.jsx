@@ -72,7 +72,7 @@ const Contact = () => {
               <h3 className="font-semibold md:mb-1 text-left">Email</h3>
               <a
                 href="mailto:surajchaudhary6613@gmail.com"
-                className="text-muted-foreground hover:text-primary text-xs md:text-lg transition-colors break-words"
+                className="text-muted-foreground hover:text-primary text-sm md:text-lg transition-colors break-words"
               >
                 surajchaudhary6613@gmail.com
               </a>
@@ -81,11 +81,11 @@ const Contact = () => {
             <div className="glass rounded-xl p-6 hover-lift text-left">
               <MapPin className="w-6 h-6 md:w-8 md:h-8 text-accent mb-1 md:mb-2" />
               <h3 className="font-semibold mb-1">Location</h3>
-              <p className="text-muted-foreground text-xs md:text-lg">
+              <p className="text-muted-foreground text-sm md:text-lg">
                 Current :{" "}
                 <span className="glow-text">Noida, Uttar Pradesh</span>
               </p>
-              <p className="text-muted-foreground text-xs md:text-lg">
+              <p className="text-muted-foreground text-sm md:text-lg">
                 Hometown :{" "}
                 <span className="glow-text">Basti, Uttar Pradesh</span>
               </p>
