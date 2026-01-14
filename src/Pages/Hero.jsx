@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative  py-16 px-4 md:section-padding w-full min-h-screen h-full flex flex-col-reverse md:flex-row items-center justify-between"
+      className="relative py-16 px-4  md:section-padding w-full md:min-h-screen h-full flex flex-col-reverse md:flex-row items-center justify-between"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
