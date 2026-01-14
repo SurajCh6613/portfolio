@@ -47,7 +47,7 @@ const Navbar = () => {
           href="#contact"
           className="bg-primary text-black px-2 rounded-md cursor-pointer hover:scale-105 duration-300"
         >
-          Hire Me
+          Contact Me
         </a>
       </ul>
 
@@ -77,7 +77,7 @@ const Navbar = () => {
             href="#contact"
             className="bg-primary text-black px-2 rounded-md cursor-pointer hover:scale-105 duration-300"
           >
-            Hire Me
+            Contact Me
           </a>
         </ul>
       </div>
