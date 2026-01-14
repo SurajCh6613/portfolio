@@ -46,7 +46,7 @@ const Contact = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-8 md:mb-16"
+          className="text-center mb-8"
         >
           <span className="text-primary font-mono text-sm">Get In Touch</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-2 md:mt-4">

@@ -35,7 +35,7 @@ const Certifications = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-8 md:mb-16"
+          className="text-center mb-8"
         >
           <h2 className="text-3xl md:text-5xl font-bold">
             📜 <span className="text-gradient">Certifications</span>

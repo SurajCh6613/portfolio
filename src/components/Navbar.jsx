@@ -43,7 +43,12 @@ const Navbar = () => {
             {nav.name}
           </a>
         ))}
-        <a href="#contact" className="bg-primary text-black px-2 rounded-md cursor-pointer hover:scale-105 duration-300">Hire Me</a>
+        <a
+          href="#contact"
+          className="bg-primary text-black px-2 rounded-md cursor-pointer hover:scale-105 duration-300"
+        >
+          Hire Me
+        </a>
       </ul>
 
       {/* Mobile Drawer */}
@@ -68,6 +73,12 @@ const Navbar = () => {
               {nav.name}
             </a>
           ))}
+          <a
+            href="#contact"
+            className="bg-primary text-black px-2 rounded-md cursor-pointer hover:scale-105 duration-300"
+          >
+            Hire Me
+          </a>
         </ul>
       </div>
 
