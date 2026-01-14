@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative py-16 px-4  md:section-padding w-full md:min-h-screen h-full flex flex-col-reverse md:flex-row items-center justify-between"
+      className="relative  w-full py-24 px-6 md:section-padding md:min-h-screen h-full flex flex-col-reverse md:flex-row items-center justify-between"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
@@ -25,9 +25,9 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-2 md:mb-6"
+          className="mb-6"
         >
-          <span className="inline-block px-4 py-2 rounded-full glass text-sm text-primary font-mono">
+          <span className="inline-block px-6 py-2 rounded-full glass text-sm text-primary font-mono">
             Available for work
           </span>
         </motion.div>
@@ -36,7 +36,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-4xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 leading-tight"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
         >
           Hi, I'm{" "}
           <span className="text-gradient glow-text">Suraj Chaudhary</span>
@@ -46,7 +46,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="mb-4 md:mb-8"
+          className="mb-8"
         >
           <p className="text-xl md:text-2xl text-muted-foreground font-light">
             Full-Stack Developer & UI/UX Enthusiast
@@ -62,7 +62,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.6 }}
-          className="flex  gap-4 justify-center items-center mb-6 md:mb-12"
+          className="flex  gap-4 justify-center items-center mb-12"
         >
           <a
             href="#projects"
@@ -97,7 +97,7 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="w-12 h-12 rounded-full glass flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/50 transition-all duration-300"
             >
-              <Icon size={20} />
+              <Icon size={24} />
             </motion.a>
           ))}
         </motion.div>
