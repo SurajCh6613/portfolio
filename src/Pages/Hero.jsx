@@ -73,7 +73,7 @@ const Hero = () => {
           </a>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1pYx-B2pnDDJGBum4rlwlWXluzXs8aX3O/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1SQqccLa4RsueZXjbDsny86NtBreE_rqt/view?usp=drive_link"
             className="md:px-8 p-3 md:py-4 rounded-full glass text-xs text-foreground font-semibold hover:bg-secondary transition-all duration-300"
           >
             Download Resume
