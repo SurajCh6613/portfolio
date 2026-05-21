@@ -5,7 +5,7 @@ import { Code2, Palette, Rocket, Coffee } from "lucide-react";
 import heroImage from "../assets/heroImage.png";
 
 const highlights = [
-  { icon: Code2, label: "5+ Months Experience", color: "text-primary" },
+  { icon: Code2, label: "3+ Months Experience", color: "text-primary" },
   { icon: Palette, label: "UI/UX Focused", color: "text-accent" },
   { icon: Rocket, label: "5+ Projects", color: "text-primary" },
   { icon: Coffee, label: "∞ Coffee", color: "text-accent" },
@@ -70,13 +70,13 @@ const About = () => {
                       <div>
                         <span>role:</span>
                         <span className="text-accent">
-                          "Full Stack Developer"
+                          "Application Developer"
                         </span>
                       </div>
 
                       <div>
-                        <span>techStack:</span>
-                        <span className="text-accent">"MERN + Java"</span>
+                        <span>tech:</span>
+                        <span className="text-accent">"Java + MERN"</span>
                       </div>
 
                       <div>
@@ -102,17 +102,15 @@ const About = () => {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I'm Suraj Chaudhary, a passionate full-stack developer with
-              hands-on experience in MERN stack and Java. I love building
-              modern, responsive web applications that solve real problems and
-              provide seamless user experiences. I thrive in collaborative
-              environments where I can learn and contribute.
+              I'm a Full-Stack Developer currently working at IBM, where I build
+              and contribute to enterprise-grade applications using Java and
+              modern web technologies.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Outside coding, I explore new technologies, refine my skills on
-              competitive programming platforms like LeetCode and CodeChef, and
-              work on personal projects that expand my problem-solving
-              abilities.
+              I specialize in developing scalable backend systems and responsive
+              frontend interfaces using Spring Boot, React, and the MERN stack.
+              I enjoy solving complex problems and creating efficient,
+              user-focused digital solutions.
             </p>
 
             {/* Highlights Grid */}

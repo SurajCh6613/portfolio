@@ -53,7 +53,7 @@ const Contact = () => {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-lg mx-auto">
-            I'm currently open to new opportunities and collaborations. Whether
+            I'm open to new opportunities and collaborations. Whether
             you have a project in mind or just want to say hi, I'd love to hear
             from you!
           </p>
@@ -83,11 +83,11 @@ const Contact = () => {
               <h3 className="font-semibold mb-1">Location</h3>
               <p className="text-muted-foreground text-sm md:text-lg">
                 Current :{" "}
-                <span className="glow-text">Noida, Uttar Pradesh</span>
+                <span className="glow-text">Bengaluru, Karnataka, IN</span>
               </p>
               <p className="text-muted-foreground text-sm md:text-lg">
                 Hometown :{" "}
-                <span className="glow-text">Basti, Uttar Pradesh</span>
+                <span className="glow-text">Basti, Uttar Pradesh, IN</span>
               </p>
             </div>
           </motion.div>

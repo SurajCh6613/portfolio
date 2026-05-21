@@ -28,7 +28,7 @@ const Hero = () => {
           className="mb-6"
         >
           <span className="inline-block px-6 py-2 rounded-full glass text-sm text-primary font-mono">
-            Available for work
+            Open to Full-Stack & Backend Roles
           </span>
         </motion.div>
 
@@ -49,11 +49,10 @@ const Hero = () => {
           className="mb-8"
         >
           <p className="text-xl md:text-2xl text-muted-foreground font-light">
-            Full-Stack Developer & UI/UX Enthusiast
+            Full-Stack Developer | Java & MERN Stack
           </p>
           <p className="text-lg text-muted-foreground/70 mt-1 max-w-2xl mx-auto">
-            I craft beautiful, performant web experiences with modern
-            technologies. Let's build something amazing together.
+            I build scalable web applications using Java, Spring Boot, React, and the MERN stack.
           </p>
         </motion.div>
 
@@ -73,7 +72,7 @@ const Hero = () => {
           </a>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1pYx-B2pnDDJGBum4rlwlWXluzXs8aX3O/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1zDVAFunuh9AirtU55R8eH2ApABefTHU8/view?usp=drive_link"
             className="md:px-8 p-3 md:py-4 rounded-full glass text-xs text-foreground font-semibold hover:bg-secondary transition-all duration-300"
           >
             Download Resume
